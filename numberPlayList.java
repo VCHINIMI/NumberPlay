@@ -72,6 +72,7 @@ public class numberPlayList {
 		
 		List<Double> doubleList = myList.stream().map(toDoubleFunction).collect(Collectors.toList());
 		
+		myList.stream().filter(isEvenFunction).forEach(n -> System.out.println(n));
 		
 		
 		
