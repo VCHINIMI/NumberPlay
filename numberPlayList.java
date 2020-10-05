@@ -76,6 +76,13 @@ public class numberPlayList {
 		List<Integer> doubleEvenList = myList.stream().filter(isEvenFunction).collect(Collectors.toList());
 		
 		Integer peak = myList.stream().filter(isEvenFunction).peek(n -> System.out.println("First element is :")).findFirst().orElse(null);
+		System.out.println("Peek integer is : "+peak);
+		
+		Integer min = myList.stream().filter(isEvenFunction).min((n1,n2) -> n1-n2).orElse(null);
+		System.out.println("Minimum Integer is : "+min);
+		
+		Integer maxInteger = myList.stream().filter(isEvenFunction).max(Comparator.comparing(Integer::intValue)).orElse(null);
+		System.out.println("Maximum INteger is : "+maxInteger);
 		
 		
 	}	
