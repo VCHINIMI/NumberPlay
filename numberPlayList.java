@@ -68,6 +68,10 @@ public class numberPlayList {
 			
 		});
 		
+		myList.stream().map(toDoubleFunction).forEach(n -> System.out.println(n));
+		
+		
+		
 		
 	}	
 
