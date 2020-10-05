@@ -70,6 +70,8 @@ public class numberPlayList {
 		
 		myList.stream().map(toDoubleFunction).forEach(n -> System.out.println(n));
 		
+		List<Double> doubleList = myList.stream().map(toDoubleFunction).collect(Collectors.toList());
+		
 		
 		
 		
