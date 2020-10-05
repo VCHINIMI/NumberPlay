@@ -84,6 +84,12 @@ public class numberPlayList {
 		Integer maxInteger = myList.stream().filter(isEvenFunction).max(Comparator.comparing(Integer::intValue)).orElse(null);
 		System.out.println("Maximum INteger is : "+maxInteger);
 		
+		Integer sumInteger = myList.stream().reduce(0, Integer :: sum);
+		long count = myList.stream().count();
+		System.out.println("Total Value : "+sumInteger+ " Average is "+sumInteger+"/"+count+" = "+sumInteger/count);
+		
+		boolean allEven = myList.stream().allMatch(isEvenFunction);
+		boolean oneEven = myList.stream().anyMatch(isEvenFunction);
 		
 		
 		
