@@ -91,7 +91,8 @@ public class numberPlayList {
 		boolean allEven = myList.stream().allMatch(isEvenFunction);
 		boolean oneEven = myList.stream().anyMatch(isEvenFunction);
 		
-		
+		List<Integer> sortedList = myList.stream().sorted((n1,n2) -> n2.compareTo(n1)).collect(Collectors.toList());
+		System.out.println(sortedList);
 		
 	}	
 
