@@ -65,7 +65,6 @@ public class numberPlayList {
 		
 		myList.stream().forEach(n->{
 			System.out.println("For each value in stream : "+n);
-			
 		});
 		
 		myList.stream().map(toDoubleFunction).forEach(n -> System.out.println(n));
@@ -74,6 +73,9 @@ public class numberPlayList {
 		
 		myList.stream().filter(isEvenFunction).forEach(n -> System.out.println(n));
 		
+		List<Integer> doubleEvenList = myList.stream().filter(isEvenFunction).collect(Collectors.toList());
+		
+		Integer peak = myList.stream().filter(isEvenFunction).peek(n -> System.out.println("First element is :")).findFirst().orElse(null);
 		
 		
 	}	
